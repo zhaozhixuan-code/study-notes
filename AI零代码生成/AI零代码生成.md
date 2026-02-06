@@ -14,6 +14,7 @@
 模版方法模式在抽象父类中定义了操作的标准流程，将一些具体实现步骤交给子类，使得子类可以在不改变流程的情况下重新定义某些特定步骤
 
 
+
 ## 执行器模式
 执行器模式不是一种设计模式，
 
@@ -24,4 +25,45 @@
 执行器模式： 提供统一的执行入口，根据生成类型执行不同的操作
 策略模式：每种模式对应的解析方法单独作为一个类来维护
 模版方法模式：抽象模版类定义了通用的文件保存流程，子类可以有自己的视线（比如多文件生成模式需要保存3个文件，而原生HTML模式只需要保存1个文件）
+
+占位图片：
+https://picsum.photos/
+
+
+# nginx
+下载nginx：https://nginx.org/en/download.html
+通过修改配置文件可以直接进行重定向
+```nginx
+# 静态资源服务器 - 80 端口
+server {
+    listen       80;
+    server_name  localhost;
+    charset      utf-8;
+    charset_types text/css application/javascript text/plain text/xml application/json;
+    # 项目部署根目录
+    root         /Users/yupi/Code/yu-ai-code-mother/tmp/code_deploy;
+    
+    # 处理所有请求
+    location ~ ^/([^/]+)/(.*)$ {
+        try_files /$1/$2 /$1/index.html =404;
+    }
+}
+```
+# 对话历史模块
+![alt text](image.png)
+
+# 协同编辑
+创建一张chat_group对话房间表，用于存这个属于哪个应用，
+
+
+
+
+
+
+
+
+
+
+
+
 
