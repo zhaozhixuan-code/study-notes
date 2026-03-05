@@ -115,3 +115,36 @@ public class FileWriteTool {
 ## Selenium
 Selenium是一个非常成熟的Web自动化框架，他的核心概念是 WebDirver（浏览器驱动）
 WebDirver可以控制浏览器行为的接口，能够让程序像人一样操作浏览器，WebDirver是Selenium与浏览器之间的桥梁
+
+
+# contentEitable
+给元素添加contentEeitable = true 就可以直接在页面进行编辑
+
+# LangGraph 4j
+
+
+
+
+
+
+
+```mermaid
+flowchart TD
+	__START__((start))
+	__END__((stop))
+	image_collector("image_collector")
+	prompt_enhancer("prompt_enhancer")
+	router("router")
+	code_generator("code_generator")
+	project_builder("project_builder")
+	__START__:::__START__ --> image_collector:::image_collector
+	image_collector:::image_collector --> prompt_enhancer:::prompt_enhancer
+	prompt_enhancer:::prompt_enhancer --> router:::router
+	router:::router --> code_generator:::code_generator
+	code_generator:::code_generator --> project_builder:::project_builder
+	project_builder:::project_builder --> __END__:::__END__
+
+	classDef ___START__ fill:black,stroke-width:1px,font-size:xx-small;
+	classDef ___END__ fill:black,stroke-width:1px,font-size:xx-small;
+```
+
